@@ -40,6 +40,68 @@ body {
   z-index: 1;
 }
 
+.brand {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px 10px 10px;
+  border: 1px solid rgba(255, 233, 153, 0.25);
+  border-radius: 999px;
+  background: rgba(12, 16, 26, 0.28);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+.brand-mark {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 200, 1) 0%, rgba(255, 222, 82, 0.9) 27%, rgba(255, 182, 0, 1) 100%);
+  box-shadow: 0 0 18px rgba(255, 203, 67, 0.7);
+}
+
+.petal {
+  position: absolute;
+  width: 10px;
+  height: 14px;
+  background: rgba(255, 247, 164, 0.95);
+  border-radius: 50% 50% 45% 45%;
+  left: 50%;
+  top: 50%;
+  transform-origin: center 18px;
+  box-shadow: 0 0 8px rgba(255, 230, 140, 0.8);
+}
+
+.petal-1 { transform: translate(-50%, -50%) rotate(0deg) translateY(-8px); }
+.petal-2 { transform: translate(-50%, -50%) rotate(90deg) translateY(-8px); }
+.petal-3 { transform: translate(-50%, -50%) rotate(180deg) translateY(-8px); }
+.petal-4 { transform: translate(-50%, -50%) rotate(270deg) translateY(-8px); }
+
+.center-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #fff 0%, #ffe17a 40%, #f3a700 100%);
+  box-shadow: 0 0 10px rgba(255, 233, 123, 0.8);
+}
+
+.brand-text {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 246, 200, 0.92);
+}
+
 .overlay {
   position: relative;
   z-index: 2;
