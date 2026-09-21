@@ -37,17 +37,20 @@
     </div>
 
     <main class="story-section" aria-label="Mensaje final">
-      <div class="story-card">
-        <p class="story-text">
+      <button class="story-button" id="openModalBtn" type="button">presiona</button>
+    </main>
+
+    <div class="modal hidden" id="messageModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="close-button" type="button" aria-label="Cerrar">×</button>
+        <h2 id="modalTitle">Mensaje</h2>
+        <p class="modal-message">
           No te olvides de respirar y ser amable contigo mismo. Estás haciendo un gran trabajo.
         </p>
-        <button class="story-button" type="button">Sigue la historia</button>
+        <img src="gato-like.png" alt="Gato estilo ilustración" class="modal-image" />
       </div>
-
-      <div class="pet-image-wrap">
-        <img src="gato-like.png" alt="Gato estilo ilustración" class="pet-image" />
-      </div>
-    </main>
+    </div>
 
     <script src="script.js"></script>
   </body>

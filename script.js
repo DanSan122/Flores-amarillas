@@ -1,5 +1,9 @@
 const canvas = document.getElementById('fieldCanvas');
 const ctx = canvas.getContext('2d');
+const modal = document.getElementById('messageModal');
+const openModalBtn = document.getElementById('openModalBtn');
+const closeModalBtn = document.querySelector('.close-button');
+const modalBackdrop = document.querySelector('.modal-backdrop');
 
 const flowers = [];
 const particles = [];
@@ -8,6 +12,26 @@ let width = 0;
 let height = 0;
 let dpr = 1;
 let time = 0;
+
+function openModal() {
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeModal() {
+  modal.classList.add('hidden');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+modalBackdrop.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
 
 function randomBetween(min, max) {
   return Math.random() * (max - min) + min;
